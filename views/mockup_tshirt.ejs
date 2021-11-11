@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/mockup_tshirt.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+    <link rel="stylesheet" href="/stylesheets/nav before login.css">
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>Tshirt Mockup Generator</title>
+</head>
+    <nav>
+      <header class="header">
+        <div class="logo"><a href=<%- `/home/${id}` %> ><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+        <ul class="main-nav">
+        <li><a href=<%- `/user/dashboard/${id}` %> >Dashboard</a></li>
+        <li><a href=<%- `/user/my-designs/${id}` %> >My Designs</a></li>
+        <li><a href=<%- `/bulk-orders/${id}` %> >Bulk Orders</a></li>
+        <li><a href=<%- `/settings/user-profile/${id}` %> >Settings</a></li>
+        
+        </ul>
+        <div class="btn">
+        <a href="/logout" class="lOut">Log Out</a>
+        </div>
+    </header> 
+    </nav>
+
+    <hr>
+
+    <body>
+        <div class="contentbox">
+            <div class="row">
+                <div class="column" >
+                   <div class="upload-head" style="margin-left: 200px;"> Upload your design below</div>
+                        <div class="upload-subhead" style="margin-left: 200px;"> Make sure to upload a PNG of the design </div>  <br><br>
+                  <form action="" method="POST" enctype="multipart/form-data">
+                    <table style="margin-left: 200px;">
+                      <tr>
+                          <td>
+                              <div class="form-label">Print Type</div> 
+                          </td>
+                          <td>
+                              <div class="user-input">
+                                <select id="color-type" name="printType" required onchange 
+                                onpropertychange 
+                                onkeyuponpaste oninput="rate()">
+                                  <option value="DTG">DTG</option>
+                                  <option value="Screen">Screen</option> 
+                                </select> </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                            <div class="form-label">Quantity</div> 
+                          </td>
+                          <td>
+                              <div class="user-input"><input required id="user-qty"  value="1" name="quantity" class="user-input-box"
+                                onchange 
+                                onpropertychange 
+                                onkeyuponpaste oninput="rate()" /></div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                            <div class="form-label">Color</div> 
+                          </td>
+                          <td>
+                            <div class="user-input">
+                                <select name="color" id="user-color" required onchange 
+                                onpropertychange 
+                                onkeyuponpaste oninput="rate()">
+                                  <option value="Black">Black</option>
+                                  <option value="White">White</option>
+                                  <option value="Blue">Blue</option>
+                                </select> </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                            <div class="form-label">Add Design</div> 
+                          </td>
+                          <td>
+                            <div class="user-input"> 
+                                <div class="user-design">
+                                    <label class="custom-file-upload">
+                                        <input type="file" onchange="readURL(this)" name="image" accept='image/*'/>
+                                        Upload your design here.
+                                    </label>
+                                </div>                               
+                                </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td colspan="2">
+                            <div class="form-label">Remarks (if any)</div> <br>
+                            <textarea name="remark" style="resize: none;" class="user-input-box text_area" placeholder="Any Additional information you would like to convey." id="" cols="50" rows="6"></textarea>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-label">Print Price (₹): </div>
+                        </td>
+                          <td><div class="user-input">
+                            <input type="text" id="final-rate" class="amount" name="printPrice" readonly="readonly"/></div>
+                          </td>
+                      </tr>
+                    </table>
+                    <br><br>
+                    <button class="add-order" style="margin-left: 200px;" id="place-order" disabled>Add to Order</button> 
+                  </form>
+                        
+
+                </div>
+                <div class="column">
+                  <center>
+                      <button class="front-btn">Front</button>
+                      <br>
+                      <div><br>
+                          <img class="tshirt" id="t-shirt-color" src="/images/tshirt.png" >
+                          <img class="mockup-img" id="img" >
+                      </div>
+                  </center>
+                </div>
+              </div>
+        </div>
+        
+
+
+        <script>
+                function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            document.querySelector("#img").setAttribute("src", e.target.result);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+        </script>
+        <script src="/javascripts/script-tshirt.js"></script>
+        
+    </body>
+    
+    
+
+    <!-- <footer>
+        <h1 class="name"><span class="Fabr">Fabr</span><span class="Ink">Ink</span></h1>
+
+        <div class="to-flex">
+            <ul class="Customer-service list">
+                <li class="heading"><strong>Services</strong></li>
+                <li><a href="#">Print On Demand and Dropshipping</a></li>
+                <li><a href="#">Design Services</a></li>
+                <li><a href="#">Bulk Orders</a></li>
+            </ul>
+
+            <ul class="Keep-with-us list">
+              <li class="heading"><strong>Discover</strong></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Policies</a></li>
+          </ul>
+    
+            <ul class="Company list">
+                <li class="heading"><strong>Integrations</strong></li>
+                <li><a href="https://www.shopify.in/">Shopify</a></li>
+                <li><a href="https://woocommerce.com/?utm_source=google&utm_medium=cpc&utm_campaign=acquisition_search_brand_row&utm_content=woocommerce&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu_u6zv-YdRJ5Ww_cGDflML6pqZGQJUmEConO_dD-vGGIYE-rS-OIRcaAuqfEALw_wcB">WooCommerce</a></li>
+                <li><a href="https://www.wix.com/">Wix</a></li>
+                <li><a href="#">FabrInk API</a></li>
+            </ul>
+    
+            <ul class="Connect-with-us list">
+                <li class="heading"><strong>Connect With Us</strong></li>
+                <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp-square"></i> WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://in.linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236063%7Ce%7Cfacebook%7C&placement=&creative=318504236063&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D20462%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu8aLJII6e5tAdEEsSJ9GNUEjtSHsujoKBhCpHgxjDXnY2DJVxOG-VAaAtu4EALw_wcB"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            </ul>
+    
+            
+        </div>
+
+        <ul class="list">
+            <li>&copy 2021 FabrInk, Inc. All Rights Reserved</li>
+            
+        </ul>
+
+      
+        
+
+    </footer>
+
+</body> -->
+</html>

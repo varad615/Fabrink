@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/bulk_orders.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>Bulk Orders | FabrInk</title>
+</head>
+
+    <nav>
+      <% if (!user) { %>
+        <header class="header">
+            <div class="logo"><a href="/home"><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+            <ul class="main-nav">
+                <li><a href="/products">Products</a></li>
+                <div class="scroll" id="section1"><a href="#section2"><li>Integrations</li></a></div>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/bulk-orders">Bulk Orders</a></li>
+                <li><a href="/support">Support</a></li>
+
+            </ul>
+            <div class="btn">
+            <button class="sUp"><a href="/signup">Sign Up</a></button>
+            <button class="sIn"><a href="./login">Sign In</a></button>
+        </div>
+        </header> 
+        <% } else {%>  
+          <header class="header">
+            <div class="logo"><a href=<%- `/home/${id}` %> ><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+            <ul class="main-nav">
+            <li><a href=<%- `/user/dashboard/${id}` %> >Dashboard</a></li>
+            <li><a href=<%- `/user/my-designs/${id}` %> >My Designs</a></li>
+            <li><a href=<%- `/bulk-orders/${id}` %> >Bulk Orders</a></li>
+            <li><a href=<%- `/settings/user-profile/${id}` %> >Settings</a></li>
+            
+            </ul>
+            <div class="btn">
+            <a href="/logout" class="lOut">Log Out</a>
+            </div>
+        </header> 
+        <% } %> 
+    </nav>
+
+    <body>
+      <div class="container">
+        <img src="/images/mover.png" class="image" width="500px" height="600px">
+
+
+        <section class="contact">
+            <div class="form-box">
+              <h2><strong>BULK ENQUIRY</strong></h2>
+              <form action="" method="POST">
+                <div class="form-item">
+                  <label for="name">Name:</label>
+                  <input type="text" name="name" id="name">
+                </div>
+                <div class="form-item">
+                  <label for="email">E-mail Address:</label>
+                  <input type="email" name="email" id="email">
+                </div>
+                <div class="form-item">
+                  <label for="message">Message:</label>
+                  <textarea name="message" id="message" cols="30" rows="7"></textarea>
+                </div>
+                <div class="form-item">
+                  <input type="submit" value="Submit" id="submit">
+                </div>
+              </form>
+            </div>
+          </section>
+      </div>
+        
+    </body>
+    
+    
+
+    <footer>
+        <h1 class="name"><span class="Fabr">Fabr</span><span class="Ink">Ink</span></h1>
+
+        <div class="to-flex">
+          <ul class="Customer-service list">
+            <li class="heading"><strong>Services</strong></li>
+            <li><a href="/pod">Print On Demand and Dropshipping</a></li>
+            <li><a href="/services">Design Services</a></li>
+            <li><a href="/bulk-orders">Bulk Orders</a></li>
+        </ul>
+
+        <ul class="Keep-with-us list">
+          <li class="heading"><strong>Discover</strong></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/support">Customer Support</a></li>
+          <li><a href="/policies">Policies</a></li>
+      </ul>
+    
+            <ul class="Company list">
+                <li class="heading"><strong>Integrations</strong></li>
+                <li><a href="https://www.shopify.in/">Shopify</a></li>
+                <li><a href="https://woocommerce.com/?utm_source=google&utm_medium=cpc&utm_campaign=acquisition_search_brand_row&utm_content=woocommerce&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu_u6zv-YdRJ5Ww_cGDflML6pqZGQJUmEConO_dD-vGGIYE-rS-OIRcaAuqfEALw_wcB">WooCommerce</a></li>
+                <li><a href="https://www.wix.com/">Wix</a></li>
+                <li><a href="#">FabrInk API</a></li>
+            </ul>
+    
+            <ul class="Connect-with-us list">
+                <li class="heading"><strong>Connect With Us</strong></li>
+                <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp-square"></i> WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://in.linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236063%7Ce%7Cfacebook%7C&placement=&creative=318504236063&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D20462%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu8aLJII6e5tAdEEsSJ9GNUEjtSHsujoKBhCpHgxjDXnY2DJVxOG-VAaAtu4EALw_wcB"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            </ul>
+    
+            
+        </div>
+
+        <ul class="list">
+            <li>&copy 2021 FabrInk, Inc. All Rights Reserved</li>
+            
+        </ul>
+
+      
+        
+
+    </footer>
+
+</body>
+</html>

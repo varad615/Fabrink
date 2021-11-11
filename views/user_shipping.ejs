@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/user_shipping.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>User Shipping</title>
+</head>
+    <nav>
+        <header class="header">
+            <div class="logo"><a href=<%- `/home/${id}` %> ><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+            <ul class="main-nav">
+            <li><a href=<%- `/user/dashboard/${id}` %> >Dashboard</a></li>
+            <li><a href=<%- `/user/my-designs/${id}` %> >My Designs</a></li>
+            <li><a href=<%- `/bulk-orders/${id}` %> >Bulk Orders</a></li>
+            <li><a href=<%- `/settings/user-profile/${id}` %> >Settings</a></li>
+            
+            </ul>
+            <div class="btn">
+            <a href="/logout" class="lOut">Log Out</a>
+            </div>
+        </header> 
+    </nav>
+
+    <body>
+        <div class="container">
+            <div class="left">
+                <a href=<%- `/settings/user-profile/${id}` %>><h4>User Profile</h4></a>
+                <a href= <%- `/settings/business-details/${id}` %>><h4>Business Details</h4></a>
+            </div>
+    
+            <div class="right">
+                <form action="" method="POST">
+                    <h2>User Profile</h2>
+                <div class="hldr">
+                    <div class="allin">
+                        <label for="Sticker">Brand Name</label>
+                        <input name="brandName" type="text" >
+                    </div>
+    
+                    <div class="allin">
+                        <label class="custom-file-upload">
+                            Upload your Brand Logo here
+                            <input type="file" name="image" accept='image/*'/>
+                           
+                        </label>
+                    </div>
+                </div>
+                <button type="submit">Confirm</button>
+                </form>
+                
+            </div>
+        </div>
+        
+    </body>
+    
+    
+
+
+</body>
+</html>

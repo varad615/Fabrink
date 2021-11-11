@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/Aboutus.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>About Us | FabrInk</title>
+</head>
+  <nav>
+    <% if (!user) { %>
+        <header class="header">
+            <div class="logo"><a href="#"><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+            <ul class="main-nav">
+                <li><a href="/products">Products</a></li>
+                <div class="scroll" id="section1"><a href="#section2"><li>Integrations</li></a></div>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/bulk-orders">Bulk Orders</a></li>
+                <li><a href="/support">Support</a></li>
+
+            </ul>
+            <div class="btn">
+            <button class="sUp"><a href="/signup">Sign Up</a></button>
+            <button class="sIn"><a href="./login">Sign In</a></button>
+        </div>
+        </header> 
+        <% } else {%>  
+        <header class="header">
+            <div class="logo"><a href="/home"><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+            <ul class="main-nav">
+            <li><a href="/user/dashboard">Dashboard</a></li>
+            <li><a href="/user/my-designs">My Designs</a></li>
+            <li><a href="/bulk-orders">Bulk Orders</a></li>
+            <li><a href="/settings/user-profile">Settings</a></li>
+            
+            </ul>
+            <div class="btn">
+            <a href="/logout" class="lOut">Log Out</a>
+            </div>
+        </header> 
+        <% } %> 
+    </nav>
+
+    <body>
+      <h1 class="center">ABOUT US</h1>
+      
+      <h2>COMPANY</h2>
+      <p> FabrInk is a print on demand and dropshipping(order fufilment) company.
+
+        FabrInk enables anyone to sell products online without inventory, processing and logistics hurdles. Anyone can signup on FabrInk.com and start selling products online.
+        
+        People without resources for inventory and without knowledge for merchandising can simply design and sell products online with custom printing and custom branding.
+        
+        Never before was this, this easy. FabrInk is a print on demand and drop shipping company built on the interests of graphic designers, digital marketers, influencers or anyone wants to sell products online.</p>
+       
+      <h2>OUR VISION</h2>
+      <h3>We’re here for you and your brand</h3>
+      <p>FabrInk is an on-demand printing and fulfillment company that helps people turn their ideas into brands and products. Whether you wish to create your own online brand or gift someone a personalized t-shirt, we can help you get it done. Whenever someone—you or your customer—makes a purchase, we'll automatically receive the order, fulfill, and ship it.</p>
+      <h3>Helping you grow is what keeps us going</h3>
+      <p>You trust us with your reputation, so we deliver quality you can rely on. We’re here to turn your ideas into products that make a lasting, meaningful impression.</p>
+      <h3>Always changing for the better</h3>
+      <p>We see opportunities to grow and achieve success sustainably. When orders are printed on demand, less leftover inventory winds up in landfills. It's our goal to make on-demand manufacturing the norm for a planet with finite resources and people with infinite ideas.</p>
+    </body>
+    
+    
+
+    <footer>
+        <h1 class="name"><span class="Fabr">Fabr</span><span class="Ink">Ink</span></h1>
+
+        <div class="to-flex">
+            <ul class="Customer-service list">
+                <li class="heading"><strong>Services</strong></li>
+                <li><a href="/pod">Print On Demand and Dropshipping</a></li>
+                <li><a href="/services">Design Services</a></li>
+                <li><a href="/bulk-orders">Bulk Orders</a></li>
+            </ul>
+
+            <ul class="Keep-with-us list">
+              <li class="heading"><strong>Discover</strong></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/support">Customer Support</a></li>
+              <li><a href="/policies">Policies</a></li>
+          </ul>
+    
+            <ul class="Company list">
+                <li class="heading"><strong>Integrations</strong></li>
+                <li><a href="https://www.shopify.in/">Shopify</a></li>
+                <li><a href="https://woocommerce.com/?utm_source=google&utm_medium=cpc&utm_campaign=acquisition_search_brand_row&utm_content=woocommerce&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu_u6zv-YdRJ5Ww_cGDflML6pqZGQJUmEConO_dD-vGGIYE-rS-OIRcaAuqfEALw_wcB">WooCommerce</a></li>
+                <li><a href="https://www.wix.com/">Wix</a></li>
+                <li><a href="#">FabrInk API</a></li>
+            </ul>
+    
+            <ul class="Connect-with-us list">
+                <li class="heading"><strong>Connect With Us</strong></li>
+                <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp-square"></i> WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://in.linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236063%7Ce%7Cfacebook%7C&placement=&creative=318504236063&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D20462%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu8aLJII6e5tAdEEsSJ9GNUEjtSHsujoKBhCpHgxjDXnY2DJVxOG-VAaAtu4EALw_wcB"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            </ul>
+    
+            
+        </div>
+
+        <ul class="list">
+            <li>&copy 2021 FabrInk, Inc. All Rights Reserved</li>
+            
+        </ul>
+
+      
+        
+
+    </footer>
+
+</body>
+</html>

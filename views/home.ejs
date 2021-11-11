@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/home_style.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+    <link rel="stylesheet" href="/stylesheets/nav before login.css">
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>Home | FabrInk</title>
+
+</head>
+<body>
+    <nav>
+        <% if (!user) { %>
+        <header class="header">
+            <div class="logo"><a href="#"><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+            <ul class="main-nav">
+                <li><a href="/products">Products</a></li>
+                <div class="scroll" id="section1"><a href="#section2"><li>Integrations</li></a></div>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/bulk-orders">Bulk Orders</a></li>
+                <li><a href="/support">Support</a></li>
+
+            </ul>
+            <div class="btn">
+            <button class="sUp"><a href="/signup">Sign Up</a></button>
+            <button class="sIn"><a href="./login">Sign In</a></button>
+        </div>
+        </header> 
+        <% } else {%>  
+        <header class="header">
+            <div class="logo"><a href=<%- `/home/${id}` %> ><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+            <ul class="main-nav">
+            <li><a href=<%- `/user/dashboard/${id}` %> >Dashboard</a></li>
+            <li><a href=<%- `/user/my-designs/${id}` %> >My Designs</a></li>
+            <li><a href=<%- `/bulk-orders/${id}` %> >Bulk Orders</a></li>
+            <li><a href=<%- `/settings/user-profile/${id}` %> >Settings</a></li>
+            
+            </ul>
+            <div class="btn">
+            <a href="/logout" class="lOut">Log Out</a>
+            </div>
+        </header> 
+        <% } %> 
+        
+    </nav>
+    <create>
+        <div class="container">
+            <div class="create">
+                <div class="cr_left">
+                    <h1>Create & Sell <br> Custom Products</h1>
+                    <div class="list">
+                        <ul class="icons">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                              </svg></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                              </svg></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                              </svg></li>
+                        </ul>
+                        
+                        <ul class="txt">
+                            <li>No Upfront Fees</li>
+                            <li>No Minimum Order</li>
+                            <li>Global Shipping</li>
+                        </ul>
+                    </div>
+                    <div class="start_btn" style="visibility:hidden">
+                        <a href="./Links/Dashboard/dashboard.html"><button class="start">Start Selling</button></a>
+                        <a href="Links/Catalogue/catalogue.html"><button class="order">Order for Yourself</button></a>
+                    </div>
+                </div>
+                <div class="cr_right">
+                    <img src="/images/3255317.jpg" alt="" width="700px">
+                </div>
+            </div>
+        </div>
+    </create>
+    <journey>
+        <!-- <span class="watermark">
+            <h1>FabrInk</h1>
+        </span> -->
+        <h1>Start Your Journey Today!</h1>
+        <div class="center">
+            <div class="cn_left">
+                <div class="h_holder">
+                    <h3>Easily add your design to a wide <br> range of products</h3>
+                    <p>With our free design tools, you can easily add your custom designs to t-shirts, sweatshirts, hoodies, mugs, Phone cases, and hundreds of other products.</p>
+                    <span class="link_f">
+                        <p><a href="./Links/Catalogue/catalogue.html">All Products</a></p>
+                        <img src="/images/FabrInk/arrow-right.svg" width="100px" height="30px" alt="">
+                    </span>
+                </div>
+            </div>
+            <div class="cn_right">
+                <div class="v_holder">
+                    <img src="/images/FabrInk/Black Tshirt.png" height="400px" alt="">
+                </div>
+            </div>
+        </div>
+    </journey>
+
+    <process class="process">
+        <h1>How Does It Work?</h1>
+        <div class="flex-items">
+            <div class="flex item-1">
+                <img src="" alt="">
+                <h3>Connect to Fabrink</h3>
+                <p>Connect your store to FabrInk <br>
+                    and add your products.</p>
+            </div>
+            <div class="flex item-2">
+                <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-shopping-bag-ecommerce-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" height="50px"/>
+                <h3>Order is Placed</h3>
+                <p>The customer explores your 
+                    store and purchases a product.</p>
+            </div>
+            <div class="flex item-3">
+                <img src="https://img.icons8.com/ios/50/000000/create-order--v1.png" height="50px"/>
+                <h3>FabrInk fulfills the Order</h3>
+                <p>We take care of your order from <br> A-Z  and control the whole fulfillment process.</p>
+            </div>
+            <div class="flex item-4">
+                <img src="https://img.icons8.com/external-sbts2018-outline-sbts2018/58/000000/external-shipping-economy1-sbts2018-outline-sbts2018.png" height="50px"/>
+                <h3>Order ships to your customer</h3>
+                <p>Customer receives their order,<br> and 
+                    you get all the credit.</p>
+            </div>
+        </div>
+    </process>
+
+    <div class="connect">
+        <div class="scroll" id="section2"> <a href="#section1"><h1>Connect Your Store</h1></a></div>
+        <p>FabrInk easily integrates with major e-commerce platforms and marketplaces</p>
+        <div class="icons">
+            <div class="hldr">
+                <img src="https://img.icons8.com/color/144/000000/shopify.png" width="120px"/>
+            </div>
+            <div class="hldr">
+                <img src="/images/FabrInk/LOGO.png" width="120px"/>
+            </div>            
+            <div class="hldr">
+                <img src="https://img.icons8.com/windows/128/000000/wix.png" width="120px"/>
+            </div>
+        </div>
+    </div>
+
+    <% if (!user) { %>
+    <footer>
+        <h1 class="name"><span class="Fabr">Fabr</span><span class="Ink">Ink</span></h1>
+
+        <div class="to-flex">
+            <ul class="Customer-service list">
+                <li class="heading"><strong>Services</strong></li>
+                <li><a href="/pod">Print On Demand and Dropshipping</a></li>
+                <li><a href="/services">Design Services</a></li>
+                <li><a href="/bulk-orders">Bulk Orders</a></li>
+            </ul>
+
+            <ul class="Keep-with-us list">
+              <li class="heading"><strong>Discover</strong></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/support">Customer Support</a></li>
+              <li><a href="/policies">Policies</a></li>
+          </ul>
+    
+            <!-- <ul class="Company list">
+                <li class="heading"><strong>Integrations</strong></li>
+                <li><a href="https://www.shopify.in/">Shopify</a></li>
+                <li><a href="https://woocommerce.com/?utm_source=google&utm_medium=cpc&utm_campaign=acquisition_search_brand_row&utm_content=woocommerce&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu_u6zv-YdRJ5Ww_cGDflML6pqZGQJUmEConO_dD-vGGIYE-rS-OIRcaAuqfEALw_wcB">WooCommerce</a></li>
+                <li><a href="https://www.wix.com/">Wix</a></li>
+                <li><a href="#">FabrInk API</a></li>
+            </ul> -->
+    
+            <ul class="Connect-with-us list">
+                <li class="heading"><strong>Connect With Us</strong></li>
+                <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp-square"></i> WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://in.linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236063%7Ce%7Cfacebook%7C&placement=&creative=318504236063&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D20462%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu8aLJII6e5tAdEEsSJ9GNUEjtSHsujoKBhCpHgxjDXnY2DJVxOG-VAaAtu4EALw_wcB"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            </ul>
+
+            <ul class="Company list">
+                <li class="heading"><strong>Newsletter</strong></li>
+                <nav class="footer-nav">
+                  <ul class="foot-nav">
+                    <form id="myForm">
+                      <li>
+                        <input
+                          type="email"
+                          id="emailaddress"
+                          name="Email_id"
+                          placeholder="ENTER EMAIL"
+                        /><label for="floatingInput"></label>
+                      </li>
+                      <li>
+                        <button type="button" onclick="SubForm()" class="last">
+                          Subscribe
+                        </button>
+                      </li>
+                    </form>
+                  </ul>
+                  <br />
+                  <li><div id="thanks"></div></li>
+                </nav>
+            </ul>
+    
+            
+        </div>
+
+        <ul class="list">
+            <li>&copy 2021 FabrInk, Inc. All Rights Reserved</li>
+            
+        </ul>
+
+      
+        
+
+    </footer>
+    <% } %> 
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/19273/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+
+</body>
+</html>

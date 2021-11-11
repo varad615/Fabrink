@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="stylesheets/login.css" />
+    <title>SignIn | FabrInk</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="column" style="background-color: #fff">
+        <img src="/images/login png.png" alt="" />
+      </div>
+      <div class="column" style="background-color: #fff">
+        <div class="container">
+          <div class="login">
+            <center>
+              <form name="loginform" method="POST">
+                <h1>Welcome Back</h1>
+                <h3>
+                  Log into <span class="Fabr">Fabr</span
+                  ><span class="Ink">Ink</span>
+                </h3>
+                <p></p>
+                <input
+                  type="text"
+                  class="textbox"
+                  placeholder="Username"
+                  id="username"
+                  name="username"
+                  required
+                />
+                <p>
+                  <input
+                    type="password"
+                    class="textbox"
+                    placeholder="Password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                </p>
+                <p id="demo" class="alert"></p>
+
+                <br />
+     <!--           <label class="cont"
+                  >Stay Signed in
+                  <input type="checkbox" checked="checked" />
+                  <span class="checkmark"></span>
+                </label> -->
+                <p>
+                  <br />
+
+                  <a href="/signup"><input
+                    type="button"
+                    value="Sign Up"
+                    class="btn-signup"
+                  /></a>
+                  <button class="btn">Login</button>
+                  <!-- <input
+                    type="button"
+                    value="Login"
+                    class="btn"
+                  /> -->
+                  <br>
+                </p>
+              </form>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/javascripts/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white: rgba(255, 255, 255, 0.8);
+  --font-blck: #181818;
+  --font-1: "Poppins", sans-serif;
+  --font-2: "Noto Sans Display", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* navbar */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+header {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+  color: #34495e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  position: relative;
+  left: 25px;
+}
+.main-nav {
+  margin-top: 5px;
+
+  font-size: 1.5em;
+}
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: black;
+  font-size: 0.99em;
+}
+
+.main-nav a:hover {
+  color: #fd045c;
+}
+.Fabr {
+  color: #fd045c;
+}
+.Ink {
+  color: #30cfc2;
+}
+
+.btn1 {
+  background-color: white;
+  border: 1px;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.btn2 {
+  background-color: #fd045c;
+  border: 1px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 10px;
+  cursor: pointer;
+}
+
+.btn2 a:hover {
+  color: white;
+}
+
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: white;
+}
+
+.btn button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0px 5px;
+  transition: all 0.3s ease;
+  font-family: var(--font-1);
+}
+
+.btn .submit {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#user-id {
+  display: none;
+}
+
+.btn .sUp {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.btn .lOut {
+  background-color: #fd045c;
+  color: rgb(255, 255, 255);
+  margin-right: 25px;
+}
+
+.btn .sUp:hover {
+  background-color: #ccc;
+  color: var(--white);
+}
+
+.btn .lOut:hover {
+  border: 1px solid #181818;
+  background-color: var(--white);
+  color: #181818;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+hr {
+  border: solid 1px #ff6363;
+  background-color: #ff6363;
+  margin: 20px 50px;
+}
+
+/*Body*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --Font-1: "Poppins", sans-serif;
+  --Font-2: "Noto Sans Display", sans-serif;
+  --bg-color: linear-gradient(
+    0deg,
+    rgba(255, 205, 205, 0.4),
+    rgba(255, 205, 205, 0.4)
+  );
+  --th-color: #fd045c;
+  --df-color: #252525;
+  --label-color: #ff6363;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 20px;
+  padding: 15px 30px;
+  font-family: var(--Font-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1400px;
+}
+
+.container .details .product {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 12px 20px;
+}
+
+.container .details .product h2 {
+  font-family: var(--Font-1);
+  font-size: 1.6rem;
+  padding: 10px 0;
+}
+
+.container .details .product table {
+  width: 90%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 205, 205, 0.4),
+    rgba(255, 205, 205, 0.4)
+  );
+  border: 1px solid #ff6363;
+  border-radius: 12px;
+  padding: 12px 20px;
+}
+
+.container .details .product table th {
+  font-family: var(--Font-2);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--th-color);
+  padding: 10px 0;
+  letter-spacing: 1px;
+}
+
+.container .details .product table td {
+  font-family: var(--Font-2);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 0px;
+  text-align: center;
+}
+
+table td,
+th {
+  border-right: 1px solid #ccc;
+}
+
+table td:last-child,
+th:last-child {
+  border-right: none;
+}
+
+.container .details .shipment {
+  width: 80%;
+  padding: 12px 20px;
+  display: inline-block;
+}
+
+.container .details .shipment h2 {
+  font-family: var(--Font-2);
+  font-size: 1.6rem;
+  padding: 10px 0;
+}
+
+.container .details .shipment .inputs {
+  width: 90%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 205, 205, 0.4),
+    rgba(255, 205, 205, 0.4)
+  );
+  border: 1px solid #ff6363;
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.inputs .allin {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.inputs .allin textarea {
+  resize: none;
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  height: 100px;
+  border-radius: 7px;
+}
+
+.inputs .allin input {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+
+.inputs .allin label {
+  color: var(--label-color);
+}
+
+.inputs .allin input:focus,
+.inputs .allin textarea:focus {
+  border: 1px solid #ff6363;
+}
+
+.btn button {
+  width: 90%;
+  margin: 12px 0;
+  padding: 12px 20px;
+  background-color: var(--label-color);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.btn .submit {
+  width: 90%;
+  margin: 12px 0;
+  padding: 12px 20px;
+  background-color:var(--label-color);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/checkout.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>Checkout | FabrInk</title>
+</head>
+<nav>
+    <header class="header">
+        <div class="logo"><a href=<%- `/home/${id}` %> ><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+        <ul class="main-nav">
+        <li><a href=<%- `/user/dashboard/${id}` %> >Dashboard</a></li>
+        <li><a href=<%- `/user/my-designs/${id}` %> >My Designs</a></li>
+        <li><a href=<%- `/bulk-orders/${id}` %> >Bulk Orders</a></li>
+        <li><a href=<%- `/settings/user-profile/${id}` %> >Settings</a></li>
+        
+        </ul>
+        <div class="btn">
+        <a href="/logout" class="lOut">Log Out</a>
+        </div>
+    </header> 
+</nav>
+
+<hr>
+
+    <body>
+        <div class="container">
+            <h1>Checkout</h1>
+            <div class="details">
+                <div class="product">
+                    <h2>Product Details</h2>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Quantity</th>
+                            <th>Product Price</th>
+                            <th>Print/Handling</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td><%- order.type %> </td>
+                            <td><%- order.quantity %> </td>
+                            <% if (order.type == "T-shirt") {%>
+                                <% var product = order.quantity*150 %> 
+                            <% } else if (order.type == "Sweatshirt") { %>  
+                                <% var product = order.quantity*190 %> 
+                            <% } else if (order.type == "Hoodie") { %>
+                                <% var product = order.quantity*220 %> 
+                            <% } %>
+                            <td><%- product %> </td>
+                            
+                            <td><%- order.printPrice %> </td>
+                            <td><%- product + order.printPrice  %> </td>
+                        </tr>
+                        <tr>
+                            <td>Shipment</td>
+                            <td>1</td>
+                            <td>60</td>
+                            <td>-</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Net Total</td>
+                            <% var total = product + order.printPrice %> 
+                            <td><%- total + 60 %></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="shipment">
+                    <h2>Shipment Details</h2>
+                    
+                        <form action="" method="POSt">
+                            <input type="" id="user-id" value=<%- id %> >
+                            <div class="inputs">
+                            <div class="allin item-1">
+                                <label>Order Ref. No.</label>
+                                <input type="text" readonly="readonly" value=<%- orderId %> name="orderId" id="">
+                            </div>
+                            <div class="allin item-2">
+                                <label>Order Price</label>
+                                <input type="number" required name="orderPrice" id="">
+                            </div>
+                            <div class="allin item-3">
+                                <label>Pincode</label>
+                                <input type="number" required name="pincode" id="">
+                            </div>
+                            <div class="allin item-4">
+                                <label>Customer Name</label>
+                                <input type="text" required name="customerName" id="">
+                            </div>
+                            <div class="allin item-5">
+                                <label>Phone No.</label>
+                                <input type="number" required name="phone" id="">
+                            </div>
+                            <div class="allin item-6">
+                                <label>Contact Email</label>
+                                <input type="email" required name="email" id="">
+                            </div>
+                            <div class="allin item-7">
+                                <label>City</label>
+                                <input type="text" required name="city" id="">
+                            </div>
+                            <div class="allin item-8">
+                                <label>State</label>
+                                <input type="text" required name="state" id="">
+                            </div>
+                            <div class="allin item-9">
+                                <label>Shipping Address Line 1</label>
+                                <textarea name="address1"></textarea>
+                            </div>
+                            <div class="allin item-10">
+                                <label>Shipping Address Line 2</label>
+                                <textarea name="address2"></textarea>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button class="submit">Submit Details</button>
+                        </div>
+                        <div class="btn">
+                            <button id="rzp-button1">Proceed to pay</button>
+                        </div>
+                        </form>
+                        
+                </div>
+            </div>
+        </div>  
+        <script>
+            var id = document.getElementById("user-id").value;
+            axios.post("/order").then((info) => {
+              console.log(info);
+              var options = {
+                key: "rzp_test_VxD1zQcadP2eYr", // Enter the Key ID generated from the Dashboard
+                amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                currency: "INR",
+                name: "FabrInk",
+                description: "Test Transaction",
+                image: "https://i.pinimg.com/originals/ea/77/4a/ea774ab699f2e6b0e44e23a8442e80f7.jpg",
+                order_id: info.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                handler: function (response) {
+                  alert(response.razorpay_payment_id);
+                  alert(response.razorpay_order_id);
+                  alert(response.razorpay_signature);
+                  window.location.href = `/user/dashboard/${id}`
+                },
+                prefill: {
+                  name: "Gaurav Kumar",
+                  email: "gaurav.kumar@example.com",
+                  contact: "9999999999",
+                },
+                notes: {
+                  address: "Razorpay Corporate Office",
+                },
+                theme: {
+                  color: "#ed185a",
+                },
+              };
+              var rzp1 = new Razorpay(options);
+              rzp1.on("payment.failed", function (response) {
+                alert(response.error.code);
+                alert(response.error.description);
+                alert(response.error.source);
+                alert(response.error.step);
+                alert(response.error.reason);
+                alert(response.error.metadata.order_id);
+                alert(response.error.metadata.payment_id);
+              });
+              document.getElementById("rzp-button1").onclick = function (e) {
+                rzp1.open();
+                e.preventDefault();
+              };
+            });
+          </script>
+    </body>
+    
+    
+
+ 
+
+
+</html>

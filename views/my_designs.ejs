@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/my_designs.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>My Designs</title>
+</head>
+    <nav>
+      <header class="header">
+        <div class="logo"><a href=<%- `/home/${id}` %> ><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+        <ul class="main-nav">
+        <li><a href=<%- `/user/dashboard/${id}` %> >Dashboard</a></li>
+        <li><a href=<%- `/user/my-designs/${id}` %> >My Designs</a></li>
+        <li><a href=<%- `/bulk-orders/${id}` %> >Bulk Orders</a></li>
+        <li><a href=<%- `/settings/user-profile/${id}` %> >Settings</a></li>
+        
+        </ul>
+        <div class="btn">
+        <a href="/logout" class="lOut">Log Out</a>
+        </div>
+    </header> 
+    </nav>
+
+    <body>
+        
+        <div class="mainbody">
+            <h1>
+                My Designs
+            </h1>
+
+
+<div class="table">
+<table>
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Design name</th>
+        <th>Design Preview</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% if (orders.length)  { %>
+        <% count = orders.length %>
+        <% const revOrders = orders.reverse() %> 
+        <% for (const order of revOrders) { %>
+        <tr>
+          <td><%- count %> </td>
+          <td><p class="flat"><%- order.designName %></p> </td>
+
+          <td class="ustatus">
+            <div class="sbtn">
+                <div class="lbtn">
+                    <a class="view-link" href=<%- order.design.url %> target="_blank" >View</a>
+                        
+                </div>
+            </div>
+        </td>
+        </tr>
+          <% count = count - 1 %>
+        <% } %>   
+      <% } %>  
+      <!-- `/user/my-designs/${order._id}` -->
+      
+    </tbody>
+  </table>
+
+</div>
+
+
+</div>
+
+    </body>
+    
+    
+
+    
+
+</body>
+</html>

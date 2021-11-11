@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --white:rgba(255, 255, 255, 0.8);
+    --font-blck: #181818;
+    --font-1: 'Poppins', sans-serif;
+    --font-2: 'Noto Sans Display', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+* 
+{
+	box-sizing: border-box;
+}
+header {
+	font-family: 'Poppins', sans-serif;
+	line-height: 1;
+	margin: 0;
+	
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2,
+h3,
+a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.logo {
+	margin: 0;
+	position:relative;
+    left: 25px;
+    }
+.main-nav {
+	margin-top: 5px;
+    
+   
+    font-size: 1.5em;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-align: center;
+	display: block;
+}
+
+
+.main-nav a {
+	color: black;
+	font-size: .99em;
+}
+
+
+.main-nav a:hover {
+	color:#fd045c;
+}
+.Fabr{
+    color:#fd045c;
+}
+.Ink{
+    color: #30cfc2;
+}
+
+.btn1{
+    background-color: white;
+  border: 1px;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.btn2{
+    background-color:#fd045c;
+  border: 1px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 10px;
+  cursor: pointer;
+  
+}
+
+.btn2 a:hover{
+    color: white;
+    
+}
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background-color: white;
+
+}
+
+.btn button{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0px 5px;
+    transition: all 0.3s ease;
+    font-family: var(--font-1);
+}
+
+.btn .sUp{
+    background-color: transparent;
+    border: 1px solid #ccc;
+}
+
+.btn .lOut{
+    background-color: #FD045C;
+    color: rgb(255, 255, 255);
+    margin-right: 25px;
+}
+
+.btn .sUp:hover{
+    background-color: #ccc;
+    color: var(--white) ;
+}
+
+.btn .lOut:hover{
+    border: 1px solid #181818;
+    background-color: var(--white);
+    color: #181818;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+
+
+
+/*Body*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.right{
+    /* border:1px solid #FFA3A3; */
+    padding: 15px 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left{
+    padding: 15px 50px;
+    margin-top: 3.5em;
+    color: #FF6363;
+    font-weight: 400;
+    
+}
+
+.left h4{
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.right h2{
+    font-size: 2em;
+    font-family: 'Noto Sans', sans-serif;
+    /* margin-bottom: 1em; */
+
+}
+
+.right .hldr{
+    border:1px solid #FFA3A3;
+    border-radius: 12px;
+    padding: 15px 30px;
+    background: rgba(255, 205, 205, 0.4);
+    width: 95%;
+    margin:8px 0 ;
+}
+
+.hldr .allin input,textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin:8px 0;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+
+}
+
+.hldr .allin input:focus,
+.hldr .allin textarea:focus{
+    border: 1px solid    #FF9999;
+}
+
+
+.right .allin {
+    padding: 6px 0;
+}
+
+.right .allin label {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.right button{
+    width: 95%;
+    margin: 10px 0;
+    padding: 8px 16px;
+    background-color: #FF6363;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}

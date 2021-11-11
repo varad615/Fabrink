@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root {
+  --login-btn: #fd045c;
+  --start_selling_btn: #ff005a;
+  --signup_btn_stroke: #cccccc;
+  --font_color: #252525;
+  --ink: #1dd8c8;
+}
+body {
+  margin: 0%;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.Fabr {
+  color: #fd045c;
+}
+.Ink {
+  color: var(--ink);
+}
+.container {
+  color: var(--font_color);
+  position: absolute;
+  top: 45%;
+  border: solid 2px #fd045c;
+  border-radius: 12px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  left: 80%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.textbox {
+  background-color: var(--signup_btn_stroke);
+  border: none;
+  color: black;
+  font-size: 17px;
+  padding: 15px;
+  border-radius: 12px;
+}
+.btn {
+  background-color: var(--login-btn);
+  border-radius: 12px;
+  color: white;
+  border: none;
+  font-size: 17px;
+  padding: 15px;
+}
+
+.btn-signup {
+  background-color: #fff;
+  border: solid 2px var(--signup_btn_stroke);
+  border-radius: 12px;
+  color: var(--login-btn);
+  border: none;
+  font-size: 17px;
+  padding: 15px;
+}
+
+.alert {
+  color: red;
+}
+
+/* checkbox */
+
+.cont {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 9px;
+  background-color: #1dd8c8;
+}
+
+.cont:hover input ~ .checkmark {
+  background-color: #313131;
+}
+
+.cont input:checked ~ .checkmark {
+  background-color: var(--login-btn);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.cont input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.cont .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+img {
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100vh;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: max-content;
+  }
+  img {
+    visibility: hidden;
+  }
+
+  .container {
+    color: var(--font_color);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}

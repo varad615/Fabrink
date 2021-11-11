@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/customer_support.css">
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+    <link rel="stylesheet" href="/stylesheets/nav before login.css">
+
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/58728929a1.js" crossorigin="anonymous"></script>
+    <title>Customer Support | FabrInk</title>
+</head>
+    <nav>
+        <% if (!user) { %>
+            <header class="header">
+                <div class="logo"><a href="#"><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+                <ul class="main-nav">
+                    <li><a href="/products">Products</a></li>
+                    <div class="scroll" id="section1"><a href="#section2"><li>Integrations</li></a></div>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/bulk-orders">Bulk Orders</a></li>
+                    <li><a href="/support">Support</a></li>
+    
+                </ul>
+                <div class="btn">
+                <button class="sUp"><a href="/signup">Sign Up</a></button>
+                <button class="sIn"><a href="./login">Sign In</a></button>
+            </div>
+            </header> 
+            <% } else {%>  
+            <header class="header">
+                <div class="logo"><a href="/home"><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+                <ul class="main-nav">
+                <li><a href="/user/dashboard">Dashboard</a></li>
+                <li><a href="/user/my-designs">My Designs</a></li>
+                <li><a href="/bulk-orders">Bulk Orders</a></li>
+                <li><a href="/settings/user-profile">Settings</a></li>
+                
+                </ul>
+                <div class="btn">
+                <a href="/logout" class="lOut">Log Out</a>
+                </div>
+            </header> 
+            <% } %> 
+    </nav>
+
+    <body>
+       
+        <h1 class="center">
+            CUSTOMER SUPPORT
+        </h1>
+        <div class="cont1">
+            <div>
+                <h2>CHAT WITH US</h2>
+        <p>We heard you. Everyone is convenient with a simple chat option to have your queries answered. So, chat with us on WhatsApp on our whatsApp support number. You can also email us to raise a ticket.</p>
+        <p class="imp">+91 9082252336</p>
+            </div>
+        
+        <img src="/images/Whatsapp-Logo2.jpg" class="img1" width="600px" height="auto">
+        </div>
+
+        <div class="cont2">
+        <img src="/images/email-icon-300x300.png" class="img2" width="350px" height="auto">
+        <div>
+        <h2>EMAIL TO RAISE A TICKET</h2>
+        <p>The form of business communication. If you have definite set of questions, just send our support team an email to get it answered within a day.</p>
+        <p class="imp">care@fabrink.com</p>
+        </div>
+        
+        </div>
+    
+        
+    </body>
+    
+    
+
+    <footer>
+        <h1 class="name"><span class="Fabr">Fabr</span><span class="Ink">Ink</span></h1>
+
+        <div class="to-flex">
+            <ul class="Customer-service list">
+                <li class="heading"><strong>Services</strong></li>
+                <li><a href="/pod">Print On Demand and Dropshipping</a></li>
+                <li><a href="/services">Design Services</a></li>
+                <li><a href="/bulk-orders">Bulk Orders</a></li>
+            </ul>
+
+            <ul class="Keep-with-us list">
+              <li class="heading"><strong>Discover</strong></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/support">Customer Support</a></li>
+              <li><a href="/policies">Policies</a></li>
+          </ul>
+    
+            <ul class="Company list">
+                <li class="heading"><strong>Integrations</strong></li>
+                <li><a href="https://www.shopify.in/">Shopify</a></li>
+                <li><a href="https://woocommerce.com/?utm_source=google&utm_medium=cpc&utm_campaign=acquisition_search_brand_row&utm_content=woocommerce&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu_u6zv-YdRJ5Ww_cGDflML6pqZGQJUmEConO_dD-vGGIYE-rS-OIRcaAuqfEALw_wcB">WooCommerce</a></li>
+                <li><a href="https://www.wix.com/">Wix</a></li>
+                <li><a href="#">FabrInk API</a></li>
+            </ul>
+    
+            <ul class="Connect-with-us list">
+                <li class="heading"><strong>Connect With Us</strong></li>
+                <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp-square"></i> WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://in.linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236063%7Ce%7Cfacebook%7C&placement=&creative=318504236063&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D20462%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwtMCKBhDAARIsAG-2Eu8aLJII6e5tAdEEsSJ9GNUEjtSHsujoKBhCpHgxjDXnY2DJVxOG-VAaAtu4EALw_wcB"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            </ul>
+    
+            
+        </div>
+
+        <ul class="list">
+            <li>&copy 2021 FabrInk, Inc. All Rights Reserved</li>
+            
+        </ul>
+
+      
+        
+
+    </footer>
+
+</body>
+</html>

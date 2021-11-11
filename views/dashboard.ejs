@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0- 
+beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384- 
+giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <link rel="stylesheet" href="/stylesheets/nav after login.css">
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav>
+      <header class="header">
+        <div class="logo"><a href=<%- `/home/${id}` %> ><img src="/images/Fabrink Full Logo FINAL.png" width="150px" height="auto"></a></div>
+        <ul class="main-nav">
+        <li><a href=<%- `/user/dashboard/${id}` %> >Dashboard</a></li>
+        <li><a href=<%- `/user/my-designs/${id}` %> >My Designs</a></li>
+        <li><a href=<%- `/bulk-orders/${id}` %> >Bulk Orders</a></li>
+        <li><a href=<%- `/settings/user-profile/${id}` %> >Settings</a></li>
+        
+        </ul>
+        <div class="btn">
+        <a href="/logout" class="lOut">Log Out</a>
+        </div>
+    </header> 
+    </nav>
+
+    <div class="dashboard">
+      <h2>Create Order</h2>
+      <div class="hldr">
+        <h3>Add Product</h3>
+        <p>Select your product style</p>
+
+        <div class="dropdown">
+          <!-- <form action="" method></form> -->
+          <input type="" id="user-id" value=<%- id %> >
+          <select
+          id="product_option"
+            class="custom-drop-select"
+            name="products"
+            onchange
+            onpropertychange
+            onkeyuponpaste
+            oninput="product()"
+          >
+            <option value="empty">Choose Your Style</option>
+            <option value="1">T-shirt</option>
+            <option value="2">Sweatshirt</option>
+            <option value="3">Hoodie</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>Order History</h2>
+      <div class="hldr">
+        <table>
+          <tr>
+            <th>Live Date</th>
+            <th>Order No.</th>
+            <th>Status</th>
+            <th>Shipment Status</th>
+          </tr>
+          <% if (orders.length)  { %>
+            <% count = orders.length %>
+            <% const revOrders = orders.reverse() %> 
+            <% for (const order of revOrders) { %>
+            <tr>
+              <td><%- order.date.toLocaleString().split(",")[0] %> </td>
+              <td><%- count %> </td>
+              <td><%- order.status %> </td>
+              <td><%- order.shipmentStatus %> </td>
+            </tr>
+            <% count = count - 1 %>
+            <% } %>   
+          <% } %>  
+          
+          <!-- <tr>
+            <td>30th Sept 2021</td>
+            <td>0004</td>
+            <td>To be Printed</td>
+            <td>www.shiprocket.com</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>30th Sept 2021</td>
+            <td>0004</td>
+            <td>To be Printed</td>
+            <td>www.shiprocket.com</td>
+            <td>Pending</td>
+          </tr> -->
+        </table>
+      </div>
+    </div>
+
+    <script src="/javascripts/dashbord.js"></script>
+
+  </body>
+</html>

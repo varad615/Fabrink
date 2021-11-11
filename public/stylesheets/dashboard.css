@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white: rgba(255, 255, 255, 0.8);
+  --font-blck: #181818;
+  --font-1: "Poppins", sans-serif;
+  --font-2: "Noto Sans Display", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.alert-div {
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.alert-p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* navbar */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+header {
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#user-id {
+  display: none;
+}
+
+h2,
+h3,
+a {
+  color: #34495e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  position: relative;
+  left: 25px;
+}
+.main-nav {
+  margin-top: 5px;
+
+  font-size: 1.5em;
+}
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: black;
+  font-size: 0.99em;
+}
+
+.main-nav a:hover {
+  color: #fd045c;
+}
+.Fabr {
+  color: #fd045c;
+}
+.Ink {
+  color: #30cfc2;
+}
+
+.btn1 {
+  background-color: white;
+  border: 1px;
+  border-radius: 8px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.btn2 {
+  background-color: #fd045c;
+  border: 1px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 10px;
+  cursor: pointer;
+}
+
+.btn2 a:hover {
+  color: white;
+}
+
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: white;
+}
+
+.btn button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0px 5px;
+  transition: all 0.3s ease;
+  font-family: var(--font-1);
+}
+
+.btn .sUp {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.btn .lOut {
+  background-color: #fd045c;
+  color: rgb(255, 255, 255);
+  margin-right: 25px;
+}
+
+.btn .sUp:hover {
+  background-color: #ccc;
+  color: var(--white);
+}
+
+.btn .lOut:hover {
+  border: 1px solid #181818;
+  background-color: var(--white);
+  color: #181818;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Dashboard */
+
+.dashboard {
+  margin: 50px 150px;
+  padding: 0px 50px;
+  width: 100%;
+}
+*/ .dashboard h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 20px 0px;
+}
+
+.dashboard .hldr {
+  width: 80%;
+  border: 1px solid #ffa3a3;
+  border-radius: 12px;
+  background: rgba(255, 205, 205, 0.4);
+  padding: 20px 20px;
+  margin-bottom: 40px;
+}
+
+.dashboard .hldr h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fd045c;
+}
+
+.dashboard .hldr p {
+  color: #181818;
+}
+
+.dashboard .hldr .dropdown {
+  width: 50%;
+  margin: 0px 20px;
+}
+
+.dashboard .hldr .dropdown button {
+  background-color: #fff;
+  color: #181818;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  cursor: context-menu;
+}
+
+table th,
+td {
+  padding: 8px 25px;
+  text-align: center;
+  border-right: 1px solid rgba(204, 204, 204, 0.603);
+}
+
+table th:last-child,
+td:last-child {
+  border: none;
+}
+
+table th {
+  padding-bottom: 18px;
+}
+
+td:last-child {
+  color: #fd045c;
+}
+
+td:nth-child(4) {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+td:nth-child(4):hover {
+  color: #fd045c;
+}
+
+.custom-drop-select {
+  width: fit-content;
+  height: 34px;
+  color: #000;
+  border: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.custom-drop-select option {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 12px;
+}
